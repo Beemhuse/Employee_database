@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Clock In System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+
+        <div class="container mt-5">
+            <h1 class="mb-4">Employee Attendence System</h1>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clockInModal">Clock In</button>
+            <button type="button" class="btn btn-secondary ml-2" data-toggle="modal" data-target="#clockOutModal">Clock Out</button>
+        </div>
+    
+        <div class="modal" id="clockInModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Time In</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="clockInForm">
+                            <!-- Clock In Form Fields -->
+                              
+        <form id="clockForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <input type="text" class="form-control" id="position" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" class="form-control" id="department" required>
+            </div>
+            <div class="form-group">
+                <label for="staffId">Staff ID:</label>
+                <input type="text" class="form-control" id="staffId" required>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="clockIn()">Submit</button>
+        </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Clock Out Modal -->
+        <div class="modal" id="clockOutModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Time Out</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="clockOutForm">
+                            <!-- Clock Out Form Fields -->
+                            <form id="clockForm">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name:</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="position">Position:</label>
+                                    <input type="text" class="form-control" id="position" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="department">Department:</label>
+                                    <input type="text" class="form-control" id="department" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staffId">Staff ID:</label>
+                                    <input type="text" class="form-control" id="staffId" required>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-3" onclick="clockOut()">Submit</button>
+                            </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="clock" class="mt-3"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
